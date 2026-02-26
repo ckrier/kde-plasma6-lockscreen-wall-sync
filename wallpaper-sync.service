@@ -1,0 +1,14 @@
+[Unit]
+Description=Sync lock screen and desktop wallpaper on unlock
+After=graphical-session.target
+Wants=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=path/to/your/wallpaper-sync.sh
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target
+
