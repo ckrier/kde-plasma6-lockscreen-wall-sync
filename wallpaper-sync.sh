@@ -95,6 +95,7 @@ while read -r line; do
     NEXT_IMG="$(pick_next_wallpaper)" || continue
     NEXT_URI="file://$NEXT_IMG"
 
+    echo "$NEXT_URI" > "$STATE_FILE"
     set_lock_wallpaper "$NEXT_URI"
   fi
 
